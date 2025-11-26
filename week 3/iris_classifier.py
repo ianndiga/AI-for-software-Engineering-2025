@@ -27,6 +27,7 @@ print("\n=== Exploratory Data Analysis ===")
 print(iris_df.describe())
 
 plt.figure(figsize=(15, 10))
+
 plt.subplot(2, 2, 1)
 sns.boxplot(x='species', y='sepal length (cm)', data=iris_df)
 plt.title('Sepal Length by Species')
