@@ -268,3 +268,48 @@ Improvement with More Time/Resources: With more time and resources, I would focu
 Advanced Bias Mitigation: Implement a more rigorous, end-to-end fairness audit pipeline using tools like AIF360 to test for and mitigate bias not just in the data, but in the model's predictions themselves.
 
 Causal Inference: Move beyond correlation to investigate causal relationships. For example, does a specific discharge procedure cause a reduction in readmissions? This would make the model's recommendations even more actionable and robust.
+
+# week 6
+Part 1: Theoretical Analysis
+Q1: Edge AI vs Cloud-Based AI
+Latency Reduction:
+Edge AI processes data locally on devices rather than sending it to remote cloud servers. This eliminates network transmission delays, enabling real-time decision making. For autonomous drones, this means instant obstacle detection and navigation responses without the risk of network lag causing accidents.
+
+Privacy Enhancement:
+Sensitive data remains on the device and isn't transmitted over networks. In healthcare applications like wearable ECG monitors, patient data is processed locally without exposing personal health information to cloud security vulnerabilities.
+
+Real-World Example - Autonomous Drones:
+A delivery drone using Edge AI can:
+
+Process camera feeds locally for obstacle avoidance
+
+Make navigation decisions in milliseconds
+
+Operate in areas with poor connectivity
+
+Protect sensitive visual data from transmission
+
+Q2: Quantum AI vs Classical AI
+Optimization Problem Solving:
+
+Classical AI: Uses gradient descent and heuristic methods that can get stuck in local optima
+
+Quantum AI: Leverages quantum superposition and entanglement to explore multiple solutions simultaneously, potentially finding global optima faster
+
+Key Differences:
+
+Quantum annealing (D-Wave) excels at combinatorial optimization
+
+Quantum neural networks may offer exponential speedup for specific problems
+
+Hybrid approaches combine classical and quantum computing strengths
+
+Industries Benefiting Most:
+
+Pharmaceuticals: Molecular simulation for drug discovery
+
+Finance: Portfolio optimization and risk analysis
+
+Logistics: Complex route optimization and supply chain management
+
+Materials Science: New material design and discovery
