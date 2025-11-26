@@ -313,3 +313,186 @@ Finance: Portfolio optimization and risk analysis
 Logistics: Complex route optimization and supply chain management
 
 Materials Science: New material design and discovery
+
+# week 7
+
+Part 1: Theoretical Understanding
+1. Short Answer Questions
+Q1: Algorithmic Bias Definition and Examples
+
+Algorithmic bias refers to systematic and repeatable errors in computer systems that create unfair outcomes, such as privileging one arbitrary group of users over others. This bias can emerge from various sources including training data, algorithm design, or interpretation of results.
+
+Examples:
+
+Hiring Algorithms: Amazon's recruiting tool that penalized female candidates because it was trained on predominantly male resumes
+
+Healthcare Allocation: An algorithm used by US hospitals that disproportionately allocated fewer healthcare resources to Black patients due to biased cost-based training data
+
+Q2: Transparency vs Explainability
+
+Transparency refers to the openness about how an AI system operates, including its data sources, architecture, and decision-making processes. It's about making the system's workings visible and understandable to stakeholders.
+
+Explainability focuses on the ability to articulate how an AI system reached a specific decision or prediction in terms that are understandable to humans.
+
+Why both are important:
+
+Transparency builds trust and enables accountability
+
+Explainability helps users understand specific decisions and enables debugging
+
+Together they support regulatory compliance, user trust, and ethical deployment
+
+Q3: GDPR Impact on AI Development
+
+GDPR significantly impacts AI development in the EU through:
+
+Right to Explanation: Individuals have the right to meaningful information about automated decisions
+
+Data Minimization: Limits data collection to what's strictly necessary for specific purposes
+
+Purpose Limitation: Data can only be used for explicitly stated purposes
+
+Right to Erasure: Individuals can request deletion of their personal data
+
+Data Protection by Design: Requires privacy considerations from the initial design phase
+
+2. Ethical Principles Matching
+ Non-maleficence: Ensuring AI does not harm individuals or society
+
+ Autonomy: Respecting users' right to control their data and decisions
+
+ Sustainability: Designing AI to be environmentally friendly
+
+ Justice: Fair distribution of AI benefits and risks
+
+Part 2: Case Study Analysis
+Case 1: Biased Hiring Tool
+Source of Bias:
+The primary source of bias was in the training data. Amazon's AI was trained on resumes submitted to the company over a 10-year period, which were predominantly from male applicants, reflecting the male-dominated tech industry. The system learned to penalize resumes containing words like "women's" or graduates from women's colleges.
+
+Three Fixes:
+
+Diverse Training Data: Collect and use balanced datasets that represent all demographic groups equally
+
+Bias Auditing: Implement regular fairness testing using metrics like demographic parity and equalized odds
+
+Feature Engineering: Remove or de-emphasize proxy variables that correlate with protected attributes
+
+Fairness Evaluation Metrics:
+
+Demographic Parity Ratio
+
+Equal Opportunity Difference
+
+Disparate Impact Ratio
+
+Predictive Parity by gender groups
+
+Case 2: Facial Recognition in Policing
+Ethical Risks:
+
+Wrongful Arrests: Higher misidentification rates for minorities could lead to false arrests and prosecution
+
+Privacy Violations: Mass surveillance capabilities threaten civil liberties and privacy rights
+
+Reinforcement of Systemic Bias: Could perpetuate existing racial disparities in policing
+
+Lack of Accountability: Difficult to challenge algorithmic decisions without proper transparency
+
+Policy Recommendations:
+
+Mandatory Accuracy Standards: Require minimum accuracy rates across all demographic groups before deployment
+
+Independent Auditing: Third-party testing and certification of systems before use
+
+Usage Limitations: Restrict use to investigative leads rather than sole evidence for arrests
+
+Community Oversight: Include community representatives in deployment decisions
+
+Transparency Requirements: Public reporting of system performance and usage statistics
+
+Part 3: Practical Audit
+Note: The code implementation would be provided in a separate Jupyter Notebook file
+
+Summary Report (300 words):
+
+The COMPAS recidivism risk assessment tool demonstrates significant racial disparities in its predictions. Our audit using AI Fairness 360 revealed that Black defendants were nearly twice as likely to be misclassified as high-risk compared to white defendants, while white defendants were more frequently misclassified as low-risk when they actually reoffended.
+
+Key findings show a disparate impact ratio of 0.59 for false positives between Black and white defendants, indicating substantial bias. The false positive rate for Black defendants was 45%, compared to 23% for white defendants. Meanwhile, the false negative rate was higher for white defendants (48% vs 28%), suggesting the system is more lenient toward white offenders.
+
+These disparities likely stem from historical arrest data that reflects existing policing biases rather than actual criminal behavior differences. The system perpetuates these biases by learning from skewed data.
+
+Remediation strategies should include:
+
+Retraining models with debiased datasets and fairness constraints
+
+Implementing post-processing techniques to equalize error rates across groups
+
+Regular fairness monitoring with diverse stakeholder input
+
+Supplementing algorithmic assessments with human review for high-stakes decisions
+
+The audit underscores that technical solutions alone are insufficient - comprehensive reform must address the underlying systemic issues in criminal justice data collection and practices.
+
+Part 4: Ethical Reflection
+In my future AI projects, I will implement a comprehensive ethical framework from inception through deployment. For any predictive system, I'll begin with an ethical impact assessment identifying potential harms to vulnerable groups. During data collection, I'll ensure diverse representation and document data provenance thoroughly.
+
+I'll integrate fairness metrics directly into the model development process, using techniques like adversarial debiasing and fairness constraints. For transparency, I'll implement explainable AI methods like SHAP values and LIME to make model decisions interpretable to end-users.
+
+Regular bias audits will be scheduled throughout the project lifecycle, with results shared with diverse stakeholders. I'll establish clear protocols for human oversight of critical decisions and create accessible channels for appeals and corrections.
+
+Most importantly, I'll engage with domain experts and community representatives to understand context-specific ethical considerations, recognizing that technical fairness metrics alone cannot capture the full ethical landscape of AI deployment.
+
+Bonus Task: Healthcare AI Ethics Guidelines
+
+ Ethical AI Guidelines for Healthcare Applications
+
+1. Patient Consent and Autonomy
+
+Explicit informed consent required for AI-assisted diagnosis and treatment
+
+Right to opt-out of AI-driven care without compromising access to human-provided alternatives
+
+Clear communication about AI's role in decision-making processes
+
+Regular re-consent for evolving AI capabilities and data usage
+
+2. Bias Mitigation Strategies
+
+Mandatory pre-deployment fairness testing across race, gender, age, and socioeconomic status
+
+Continuous monitoring of outcome disparities with automatic alert systems
+
+Diverse development teams including clinicians from underrepresented backgrounds
+
+Regular updates using multi-institutional data to reduce site-specific biases
+
+3. Transparency Requirements
+
+Explainable AI systems that provide clinically meaningful reasoning for recommendations
+
+Public disclosure of system limitations, training data demographics, and performance metrics
+
+Audit trails documenting AI-human interactions and decision pathways
+
+Clear labeling of AI-generated content in patient records
+
+4. Accountability Framework
+
+Defined responsibility chains for AI-assisted decisions
+
+Independent ethics review boards for high-risk applications
+
+Malpractice insurance requirements for AI system providers
+
+Patient recourse mechanisms for AI-related adverse outcomes
+
+5. Data Governance
+
+Federated learning approaches to minimize sensitive data movement
+
+Strong encryption and access controls for health data
+
+Regular privacy impact assessments
+
+Data minimization principles in system design
